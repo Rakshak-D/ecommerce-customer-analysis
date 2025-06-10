@@ -9,8 +9,7 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 
 # Load the dataset
-df = pd.read_excel("E-commerce Customer Behaviour.xlsx")
-
+df = pd.read_excel("data/E-commerce Customer Behavior.xlsx")
 # Preprocessing (mirroring Colab)
 df['Satisfaction Level'].fillna('Unknown', inplace=True)
 df['Age Group'] = pd.cut(df['Age'], bins=[20, 30, 40, 50], labels=['20-30', '31-40', '41-50'], include_lowest=True)
